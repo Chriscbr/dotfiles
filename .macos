@@ -1,0 +1,7 @@
+# first rendering issue with vscode
+# see: https://github.com/Microsoft/vscode/issues/51132
+defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
+
+# improve font legibility esp. on command line (thicker text)
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
+

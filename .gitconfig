@@ -1,0 +1,23 @@
+[user]
+	name = Chriscbr
+	email = crybicki98@gmail.com
+[core]
+	excludesfile = /Users/rybickic/.config/git/excludes
+	editor = code --wait
+
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+
+[alias]
+	lg = log --graph --abbrev-commit --decorate --date=local --format=format:'%C(yellow)%h%C(reset) - %C(blue)%an <%ae>%C(reset) %C(magenta)%ad (%ar)%C(reset)%C(green)%d%C(reset)%n %C(white)%s%C(reset)' --all
+
+[merge]
+        tool = vscode
+[mergetool "vscode"]
+        cmd = code --wait $MERGED
+
+[pull]
+	# git pull should do a rebase after fetch instead of merge
+	rebase = true
