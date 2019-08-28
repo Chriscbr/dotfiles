@@ -19,3 +19,7 @@ Currently using [Nerd Font](https://github.com/ryanoasis/nerd-fonts) patched ver
 ```
 ./brew.sh
 ```
+
+## TODO
+- Update `.macos` with more macOS defaults
+
