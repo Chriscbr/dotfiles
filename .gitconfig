@@ -2,7 +2,7 @@
 	name = Chriscbr
 	email = crybicki98@gmail.com
 [core]
-	excludesfile = /Users/rybickic/.config/git/excludes
+	excludesfile = ~/.gitignore_global
 	editor = code --wait
 
 [diff]
