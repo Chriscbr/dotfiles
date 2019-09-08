@@ -13,8 +13,9 @@ function doIt() {
 		--exclude ".DS_Store" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
-        --exclude "fonts/" \
-        --exclude "material-design-colors.itermcolors" \
+		--exclude "fonts/" \
+		--exclude "brew.sh" \
+		--exclude "material-design-colors.itermcolors" \
 		-avh --no-perms . ~;
     cd fonts;
     rsync -avh --no-perms . /Library/Fonts;
