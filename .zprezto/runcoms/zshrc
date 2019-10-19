@@ -20,5 +20,7 @@ for file in ~/.{aliases,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
+typeset -g VIRTUAL_ENV_DISABLE_PROMPT=1
+
 # Disable zsh autocorrection
 unsetopt correct
