@@ -10,6 +10,7 @@ alias d="cd ~/Developer"
 # Easier git
 alias g="git"
 alias gs="git status -sb"
+alias gloc="git ls-files | xargs wc -l"
 
 # Update things
 alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g;"
