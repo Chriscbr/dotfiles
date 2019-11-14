@@ -8,7 +8,10 @@ Install the iTerm2 theme located at `material-design-colors.itermcolors` through
 
 ## fonts
 
-Currently using [Nerd Font](https://github.com/ryanoasis/nerd-fonts) patched version of Fira Code. Font files also included in the repo for posterity.
+Now currently using [Nerd Font patched version of SF Mono](https://github.com/Twixes/SF-Mono-Powerline).
+It doesn't have as many of the patched-in icons as the nerd font I was previously using, but it works good enough (I could probably patch them in manually later).
+
+~~Currently using [Nerd Font](https://github.com/ryanoasis/nerd-fonts) patched version of Fira Code. Font files also included in the repo for posterity.~~
 
 ## Update macOS defaults
 ```
