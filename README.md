@@ -18,6 +18,8 @@ It doesn't have as many of the patched-in icons as the nerd font I was previousl
 ./.macos
 ```
 
+May require logging out and back in for changes to take effect.
+
 ## Install Homebrew formulae
 ```
 ./brew.sh

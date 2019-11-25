@@ -1,7 +1,18 @@
-# first rendering issue with vscode
+# Finder: show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Disable press-and-hold for keys in favor of key repeat.
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+# Set a really fast key repeat.
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# fix rendering issue with vscode
 # see: https://github.com/Microsoft/vscode/issues/51132
 defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
 
 # improve font legibility esp. on command line (thicker text)
 defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
 
+# Display full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
