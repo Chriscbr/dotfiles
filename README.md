@@ -25,6 +25,7 @@ May require logging out and back in for changes to take effect.
 ./brew.sh
 ```
 
-## TODO
-- Update `.macos` with more macOS defaults
+## Scripts
+Extra scripts that I wanted on my path (e.g. wabt WebAssembly tools that had to be manually compiled) are placed in the .scripts folder.
+If I think I will need to update / recompile these scripts often, I might consider alternative solutions besides just storing the binaries here, but for now this should be good enough.
 

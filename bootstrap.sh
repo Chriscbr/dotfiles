@@ -17,8 +17,9 @@ function doIt() {
 		--exclude "brew.sh" \
 		--exclude "material-design-colors.itermcolors" \
 		-avh --no-perms . ~;
-    cd fonts;
-    rsync -avh --no-perms . /Library/Fonts;
+	# commented out, since this doesn't seem to work on macOS Catalina
+    # cd fonts;
+    # rsync -avh --no-perms . /Library/Fonts;
     cd ..;
 	# source ~/.bash_profile;
 }
