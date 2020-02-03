@@ -10,12 +10,13 @@ cd "$(dirname "${BASH_SOURCE}")";
 # with the home directory (~)
 function doIt() {
 	rsync --exclude ".git/" \
+		--exclude ".gitmodules" \
 		--exclude ".DS_Store" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "fonts/" \
+		--exclude "iterm-themes/" \
 		--exclude "brew.sh" \
-		--exclude "material-design-colors.itermcolors" \
 		-avh --no-perms . ~;
 	# commented out, since this doesn't seem to work on macOS Catalina
     # cd fonts;
