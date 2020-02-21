@@ -13,6 +13,14 @@ It doesn't have as many of the patched-in icons as the nerd font I was previousl
 
 ~~Currently using [Nerd Font](https://github.com/ryanoasis/nerd-fonts) patched version of Fira Code. Font files also included in the repo for posterity.~~
 
+## iTerm profile
+
+Profile is saved in `iterm-profile.json`.
+To import it, go to Profiles > Other actions (at the bottom left) > Import JSON Profiles.
+
+Settings are saved in `/iterm-settings`.
+To import it, go to General > Preferences > Load preferences from a custom folder or URL.
+
 ## Update macOS defaults
 ```
 ./.macos

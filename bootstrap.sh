@@ -17,12 +17,12 @@ function doIt() {
 		--exclude "fonts/" \
 		--exclude "iterm-themes/" \
 		--exclude "brew.sh" \
+		--exclude "iterm-profile.json" \
+		--exclude "iterm-settings/" \
 		-avh --no-perms . ~;
 	# commented out, since this doesn't seem to work on macOS Catalina
     # cd fonts;
     # rsync -avh --no-perms . /Library/Fonts;
-    cd ..;
-	# source ~/.bash_profile;
 }
 
 if [ "$1" = "--force" ] || [ "$1" = "-f" ]; then
