@@ -27,6 +27,7 @@ To import it, go to General > Preferences > Load preferences from a custom folde
 ```
 
 May require logging out and back in for changes to take effect.
+A lot of these are bound to become out of date stop working just based on macOS updates, but I doubt any of them would accidentally change in behavior for backwards compatability reasons.
 
 ## Install Homebrew formulae
 ```

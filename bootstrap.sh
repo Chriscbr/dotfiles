@@ -20,9 +20,6 @@ function doIt() {
 		--exclude "iterm-profile.json" \
 		--exclude "iterm-settings/" \
 		-avh --no-perms . ~;
-	# commented out, since this doesn't seem to work on macOS Catalina
-    # cd fonts;
-    # rsync -avh --no-perms . /Library/Fonts;
 }
 
 if [ "$1" = "--force" ] || [ "$1" = "-f" ]; then

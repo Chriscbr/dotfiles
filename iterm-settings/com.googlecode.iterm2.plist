@@ -979,7 +979,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>128 327 918 423 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>550 303 730 467 0 0 1280 800 </string>
+	<string>550 303 650 467 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>260 282 650 488 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -1640,7 +1640,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SFMonoPowerline-Regular 13</string>
+			<string>SFMonoNerdFontComplete-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1830,17 +1830,20 @@
 	<array>
 		<string>3.3.6</string>
 		<string>3.3.8</string>
-		<string>3.3.4</string>
+		<string>3.3.0</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
-		<string>3.3.0</string>
-		<string>3.3.2</string>
 		<string>3.2.9</string>
+		<string>3.3.2</string>
+		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>SFMono Nerd Font</string>
+		<string>Source Code Pro for Powerline</string>
+		<string>FiraCode Nerd Font</string>
 		<string>SF Mono Powerline</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
@@ -1848,14 +1851,14 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1280, 800}}</string>
 		<key>topLeft</key>
-		<string>{164, 692}</string>
+		<string>{99, 800}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>E267F2F0-296C-4592-BBCF-6C1E87DC5AB1</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>30</integer>
+	<integer>35</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>587248662.20905197</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -2627,7 +2630,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-20T21:09:29Z</date>
+	<date>2020-04-05T04:52:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
