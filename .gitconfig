@@ -14,10 +14,13 @@
 	lg = log --graph --abbrev-commit --decorate --date=local --format=format:'%C(yellow)%h%C(reset) - %C(blue)%an <%ae>%C(reset) %C(magenta)%ad (%ar)%C(reset)%C(green)%d%C(reset)%n %C(white)%s%C(reset)' --all
 
 [merge]
-        tool = vscode
+	tool = vscode
 [mergetool "vscode"]
-        cmd = code --wait $MERGED
+	cmd = code --wait $MERGED
 
 [pull]
 	# git pull should do a rebase after fetch instead of merge
 	rebase = true
+
+[rebase]
+	autoStash = true
