@@ -913,6 +913,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>AD9656FB-D912-4D5D-816D-F242C6D9015D</string>
+	<key>DimOnlyText</key>
+	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -1830,35 +1832,35 @@
 	<array>
 		<string>3.3.6</string>
 		<string>3.3.8</string>
-		<string>3.3.0</string>
+		<string>3.3.4</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
+		<string>3.3.0</string>
 		<string>3.2.9</string>
 		<string>3.3.2</string>
-		<string>3.3.4</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>CMU Serif</string>
 		<string>SFMono Nerd Font</string>
 		<string>Source Code Pro for Powerline</string>
 		<string>FiraCode Nerd Font</string>
-		<string>SF Mono Powerline</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1280, 800}}</string>
 		<key>topLeft</key>
-		<string>{99, 800}</string>
+		<string>{183, 671}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>E267F2F0-296C-4592-BBCF-6C1E87DC5AB1</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>35</integer>
+	<integer>36</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>587248662.20905197</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -2630,7 +2632,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-05T04:52:32Z</date>
+	<date>2020-04-16T05:18:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
@@ -2639,6 +2641,8 @@
 	<false/>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.32581449468085111</real>
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
 	<key>TabStyleWithAutomaticOption</key>
