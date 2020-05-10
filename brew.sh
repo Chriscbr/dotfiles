@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Homebrew.
+# command-line tools for Xcode
+xcode-select --install
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -11,19 +12,30 @@ brew upgrade
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
 
-# Install GNU core utilities (those that come with macOS are outdated).
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew install coreutils
-# ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
-
-# Install some other useful utilities like `sponge`.
-brew install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+# Install GNU utils instead of MacOS equivalents
+# I'm not sure how many of these I actually need,
+# so I'm leaving them commented for now
+# brew install binutils
+# brew install coreutils
 # brew install findutils
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed
+# brew install diffutils
+# brew install gnu-indent
+# brew install gnu-sed
+# brew install ed
+# brew install gnu-tar
+# brew install grep
+# brew install gnu-which
+# brew install gawk
+# brew install gzip
+# brew install watch
+# brew install gnutls
+# brew install wget
+# brew install curl
+# brew install make
+
 # Install zsh
 brew install zsh
+brew install zsh-autosuggestions
 
 # Switch to using zsh as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
@@ -31,20 +43,31 @@ if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
   chsh -s "${BREW_PREFIX}/bin/zsh";
 fi;
 
-# Install more recent versions of some macOS tools.
+# Install more recent versions of several utilities.
+brew install bash
+brew install less
+brew install nano
 brew install vim
-brew install grep
 
-# Install other useful binaries.
-# brew install ack
-# brew install binutils
-# brew install diffutils
+# Install several other useful tools.
+brew install bat
 brew install git
 brew install gzip
 brew install tree
 brew install pstree
+brew install python
+brew install rsync
+brew install wget
 
-# Install some silly binaries.
+# Install fzf, a search utility.
+brew install fzf
+# To install useful key bindings and fuzzy completion:
+# (Note: this script will try to modify my zshrc in the root directory,
+# although the actual file changes would need to be actually made within
+# this repo for them to be kept.)
+$(brew --prefix)/opt/fzf/install
+
+# Install some silly programs.
 brew install cowsay
 brew install fortune
 brew install lolcat
