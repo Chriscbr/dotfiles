@@ -19,7 +19,13 @@ function doIt() {
 		--exclude "brew.sh" \
 		--exclude "iterm-profile.json" \
 		--exclude "iterm-settings/" \
+		--exclude ".condarc" \
 		-avh --no-perms . ~;
+
+	# hack so that any CLI changes to .condarc will affect the correct
+	# copy here (under version control) rather than just the one in the home directory
+	rm -f $HOME/.condarc
+	ln -s $(pwd)/.condarc $HOME/.condarc
 }
 
 if [ "$1" = "--force" ] || [ "$1" = "-f" ]; then

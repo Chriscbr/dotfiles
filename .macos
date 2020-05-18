@@ -5,14 +5,14 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write -g KeyRepeat -int 1
 
 # fix rendering issue with vscode
 # see: https://github.com/Microsoft/vscode/issues/51132
-defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
+# defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
 
 # improve font legibility esp. on command line (thicker text)
-defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
+# defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
 
 # Display full POSIX path as Finder window title
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true

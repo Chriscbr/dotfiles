@@ -2,6 +2,30 @@
 
 Personally customized settings for how I use my command line, based on <https://github.com/mathiasbynens/dotfiles>.
 
+## Zsh setup
+My current setup is based on [zprezto](link).
+To set it up, do the following:
+1. Clone this repo (I usually put my repos in `~/Developer` on macOS):
+```sh
+git clone --recursive https://github.com/Chriscbr/dotfiles.git
+```
+If you forget to add --recursive when you clone this repo, then run the following in the root directory:
+```sh
+git submodule update --init --recursive
+```
+2. Make sure there isn't an existing `~/.zshrc` file (if there is, and it contains any important scripts, consider moving those scripts to `/.zprezto/runcoms/zshrc` in this repo - then delete `~/.zshrc`).
+3. Run this script to sync all of your important files from the repository to your home directory:
+```sh
+./bootstrap.sh
+```
+4. Finally, restart your shell by opening a new one, or by running:
+```sh
+exec zsh
+```
+
+There might be some visual bugs if you haven't installed a necessary Nerd Font like the one below, or aren't currently using `zsh` as your shell.
+But I've tried this once when setting up a new Mac and it worked fairly okay.
+
 ## Manual installations
 
 Install the iTerm2 theme located at `material-design-colors.itermcolors` through the iTerm2 preferences > Profiles > Colors.
@@ -39,11 +63,9 @@ A lot of these are bound to become out of date stop working just based on macOS 
 ```
 
 ## Python installation
-Right now I'm using a mixed setup where I have `python` and `python@3.8` (current as of writing) versions of Python available.
+Right now I'm using anaconda for managing Python environments and versions - seems to make the most sense that homebrew has issues with staying updated with the latest Python versions, as of writing.
+
 I also use `jupyter notebook` and `jupyter lab` occasionally for more interactive Python development.
-If I want a specific version of Python and various package dependencies, I need to
-manually create a virtual environment using `virtualenv` or `python -m venv`.
-At some point I will try switching my setup to use `anaconda` and `conda`, but so far I've mostly been dealing with basic scripts so I haven't needed it.
 
 ## Scripts
 Extra scripts that I wanted on my path (e.g. `wabt` WebAssembly tools that had to be manually compiled) are placed in the .scripts folder.

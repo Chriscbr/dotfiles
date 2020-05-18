@@ -60,7 +60,7 @@ brew install rsync
 brew install wget
 
 # Install fzf, a search utility.
-brew install fzf
+# brew install fzf
 # To install useful key bindings and fuzzy completion:
 # (Note: this script will try to modify my zshrc in the root directory,
 # although the actual file changes would need to be actually made within

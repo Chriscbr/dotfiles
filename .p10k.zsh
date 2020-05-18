@@ -21,7 +21,7 @@ typeset -g POWERLEVEL9K_BACKGROUND='black'
 typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_BACKGROUND=
 
 typeset -g POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user virtualenv dir_writable dir vcs)
+typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user anaconda virtualenv dir_writable dir vcs)
 typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs battery time)
 typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "
 typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
@@ -43,6 +43,8 @@ typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='green'
 typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='green'
 typeset -g POWERLEVEL9K_TIME_BACKGROUND='black'
 typeset -g POWERLEVEL9K_TIME_FOREGROUND='white'
+typeset -g POWERLEVEL9K_ANACONDA_FOREGROUND='cyan'
+typeset -g POWERLEVEL9K_ANACONDA_BACKGROUND='black'
 typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND='cyan'
 typeset -g POWERLEVEL9K_VIRTUALENV_BACKGROUND='black'
 typeset -g POWERLEVEL9K_BATTERY_STAGES=('\uf244 ' '\uf243 ' '\uf242 ' '\uf241 ' '\uf240 ')
