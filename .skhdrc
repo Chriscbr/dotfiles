@@ -76,9 +76,35 @@
 # A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
 # ############################################################### #
 
-# Space navigation
-ctrl - left : yabai -m space --focus prev
-ctrl - right : yabai -m space --focus next
+# Note to self: for debugging, run skhd manually with the -V (verbose) flag
+
+## Space navigation:
+
+# Traditional way (just cycles through all spaces, regardless of which display they're on)
+
+# ctrl - left : yabai -m space --focus prev || yabai -m space --focus last
+# ctrl - right : yabai -m space --focus next || yabai -m space --focus first
+
+# Updated way (only cycles through windows on the current display
+# so that static windows on a separate monitor are mostly ignored)
+
+ctrl - right : yabai -m query --displays --display \
+    | jq -re ".index" \
+    | xargs -I{} yabai -m query --spaces --display {} \
+    | jq -sre "add | sort_by(.id) | reverse | nth(index(map(select(.focused == 1))) - 1).index" \
+    | xargs -I{} yabai -m space --focus {}
+
+ctrl - left : yabai -m query --displays --display \
+    | jq -re ".index" \
+    | xargs -I{} yabai -m query --spaces --display {} \
+    | jq -sre "add | sort_by(.id) | nth(index(map(select(.focused == 1))) - 1).index" \
+    | xargs -I{} yabai -m space --focus {}
+
+# Window navigation
+ctrl + alt + cmd - left : yabai -m window --focus west
+ctrl + alt + cmd - right : yabai -m window --focus east
+ctrl + alt + cmd - up : yabai -m window --focus north
+ctrl + alt + cmd - down : yabai -m window --focus south
 
 # Move spaces
 

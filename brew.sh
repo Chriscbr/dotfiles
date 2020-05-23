@@ -33,6 +33,9 @@ BREW_PREFIX=$(brew --prefix)
 # brew install curl
 # brew install make
 
+# Install node
+brew install node
+
 # Install zsh
 brew install zsh
 brew install zsh-autosuggestions
@@ -58,6 +61,7 @@ brew install pstree
 brew install python
 brew install rsync
 brew install wget
+brew install jq
 
 # Install fzf, a search utility.
 # brew install fzf

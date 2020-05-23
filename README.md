@@ -2,6 +2,9 @@
 
 Personally customized settings for how I use my command line, based on <https://github.com/mathiasbynens/dotfiles>.
 
+[TODO] Consider adjusting my setup and see if I can safely keep my dotfiles managed using `git bare` as described [here](https://www.atlassian.com/git/tutorials/dotfiles) instead of manually syncing with `bootstrap.sh`.
+[TODO] Consider removing `prezto` as a dependency - it's not really clear if I'm using many features from it, besides probably a bunch of default settings.
+
 ## Zsh setup
 My current setup is based on [prezto](https://github.com/sorin-ionescu/prezto).
 To set it up, do the following:
@@ -25,8 +28,6 @@ exec zsh
 
 There might be some visual bugs if you haven't installed a necessary Nerd Font like the one below, or aren't currently using `zsh` as your shell.
 But I've tried this once when setting up a new Mac and it worked fairly okay.
-
-Note to self: I'm not really sure if I'm getting much value out of `prezto` over default `zsh` besides maybe some defaults that I'm not totally aware of - I try to removing it as a dependency at some point.
 
 ## Manual installations
 
@@ -52,7 +53,7 @@ See [this repo](https://gist.github.com/squarism/ae3613daf5c01a98ba3a) for a mor
 At some point I may want to learn to use `screen` or `tmux`, but I haven't found a need for it yet.
 
 I'm also trying out the window manager [Yabai](https://github.com/koekeishiya/yabai).
-Currently I haven't had the time to learn all of the work flows and keyshorts associated with managed windows, so I'm just using it to remove the animation lag when switching between virtual desktops (since macOS by default has unavoidable animations whenever you try switching desktops using Ctrl + left or Ctrl + right).
+Currently I haven't had the time to learn all of the work flows and keyshorts associated with managed windows, so I'm just using it to remove the animation lag when switching between virtual desktops (since macOS by default has unavoidable animations whenever you try switching desktops using Ctrl + left or Ctrl + right), and to change the default macOS mission control space-switching behavior so that Ctrl + left or right only swaps between spaces on my current monitor, for when I have multiple monitor setups (just a small QOL improvement).
 I'm also hesitant to fully commit to using Yabai since it requires disabling SIP (special macOS security protections), which means I can't really expect to use it on my work devices.
 
 ## Update macOS defaults
@@ -75,5 +76,4 @@ I also use `jupyter notebook` and `jupyter lab` occasionally for more interactiv
 
 ## Scripts
 Extra scripts that I wanted on my path (e.g. `wabt` WebAssembly tools that had to be manually compiled) are placed in the .scripts folder.
-If I think I will need to update / recompile these scripts often, I might consider alternative solutions besides just storing the binaries here, but for now this should be good enough.
 
