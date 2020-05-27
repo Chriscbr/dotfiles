@@ -2,8 +2,7 @@
 
 Personally customized settings for how I use my command line, based on <https://github.com/mathiasbynens/dotfiles>.
 
-[TODO] Consider adjusting my setup and see if I can safely keep my dotfiles managed using `git bare` as described [here](https://www.atlassian.com/git/tutorials/dotfiles) instead of manually syncing with `bootstrap.sh`.
-[TODO] Consider removing `prezto` as a dependency - it's not really clear if I'm using many features from it, besides probably a bunch of default settings.
+- [TODO] Consider adjusting my setup and see if I can safely keep my dotfiles managed using `git bare` as described [here](https://www.atlassian.com/git/tutorials/dotfiles) instead of manually syncing with `bootstrap.sh`.
 
 ## Zsh setup
 My current setup is based on [prezto](https://github.com/sorin-ionescu/prezto).
@@ -16,7 +15,7 @@ If you forget to add --recursive when you clone this repo, then run the followin
 ```sh
 git submodule update --init --recursive
 ```
-2. Make sure there isn't an existing `~/.zshrc` file (if there is, and it contains any important scripts, consider moving those scripts to `/.zprezto/runcoms/zshrc` in this repo - then delete `~/.zshrc`).
+2. Make sure there isn't any important information in `~/.zshrc`, `~/.zprofile`, or `~/.zshenv` (if there is, consider moving it to corresponding files in this repo since those files will get overwritten).
 3. Run this script to sync all of your important files from the repository to your home directory:
 ```sh
 ./bootstrap.sh
