@@ -22,7 +22,7 @@ git submodule update --init --recursive
 ```
 4. Finally, restart your shell by opening a new one, or by running:
 ```sh
-exec zsh
+exec zsh -l
 ```
 
 There might be some visual bugs if you haven't installed a necessary Nerd Font like the one below, or aren't currently using `zsh` as your shell.

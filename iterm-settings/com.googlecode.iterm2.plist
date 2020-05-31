@@ -919,6 +919,15 @@
 	<true/>
 	<key>GlobalTouchBarMap</key>
 	<dict>
+		<key>touchbar:9B31647A-B4A5-4A01-9290-02E72127149F</key>
+		<dict>
+			<key>Action</key>
+			<integer>12</integer>
+			<key>Label</key>
+			<string>cd Dev</string>
+			<key>Text</key>
+			<string>cd ~/Developer\n</string>
+		</dict>
 		<key>touchbar:E97B2ADB-160C-4FDA-A9A6-B961EBF3AC66</key>
 		<dict>
 			<key>Action</key>
@@ -963,7 +972,7 @@
 	dWxs0g0ODxJaTlMub2JqZWN0c1YkY2xhc3OiEBGAAoAKgA3TFA0OFRkdV05TLmtleXOj
 	FhcYgAOABIAFoxobHIAGgAeACIAJWklkZW50aWZpZXJVV2lkdGhWSGlkZGVuUTAjQGjA
 	AAAAAAAI0iUmJyhaJGNsYXNzbmFtZVgkY2xhc3Nlc1xOU0RpY3Rpb25hcnmiJylYTlNP
-	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0B0oZ2yLQ5W0iUmNzhe
+	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0BzsZ2yLQ5W0iUmNzhe
 	TlNNdXRhYmxlQXJyYXmjNzkpV05TQXJyYXkACAARABoAJAApADIANwBJAEwAUgBUAGMA
 	aQBuAHkAgACDAIUAhwCJAJAAmACcAJ4AoACiAKYAqACqAKwArgC5AL8AxgDIANEA0gDX
 	AOIA6wD4APsBBAELAQ8BEQETARUBGQEbAR0BHwEhASMBLAExAUABRAAAAAAAAAIBAAAA
@@ -991,6 +1000,7 @@
 			<string>iTermTouchBarIdentifierFunctionKeys</string>
 			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
 			<string>tab bar</string>
+			<string>touchbar:9B31647A-B4A5-4A01-9290-02E72127149F/v0</string>
 			<string>touchbar:E97B2ADB-160C-4FDA-A9A6-B961EBF3AC66/v0</string>
 			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
 		</array>
@@ -1007,10 +1017,28 @@
 			<string>iTermTouchBarIdentifierNextMark</string>
 		</array>
 	</dict>
+	<key>NSTouchBarConfig: regular</key>
+	<dict>
+		<key>CurrentItems</key>
+		<array>
+			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
+		</array>
+		<key>DefaultItems</key>
+		<array>
+			<string>iTermTouchBarIdentifierManPage</string>
+			<string>iTermTouchBarIdentifierColorPreset</string>
+			<string>iTermTouchBarIdentifierFunctionKeys</string>
+			<string>NSTouchBarItemIdentifierFlexibleSpace</string>
+			<string>NSTouchBarItemIdentifierOtherItemsProxy</string>
+			<string>iTermTouchBarIdentifierAddMark</string>
+			<string>iTermTouchBarIdentifierPreviousMark</string>
+			<string>iTermTouchBarIdentifierNextMark</string>
+		</array>
+	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>320 321 799 448 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 650 429 0 0 1440 900 </string>
+	<string>0 0 650 429 0 0 3008 1692 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1379,278 +1407,180 @@
 					<key>Text</key>
 					<string>0x1f</string>
 				</dict>
-				<key>0x32-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x00</string>
-				</dict>
-				<key>0x33-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1b</string>
-				</dict>
-				<key>0x34-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1c</string>
-				</dict>
-				<key>0x35-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1d</string>
-				</dict>
-				<key>0x36-0x40000</key>
+				<key>0x5e-0x60000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x1e</string>
 				</dict>
-				<key>0x37-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1f</string>
-				</dict>
-				<key>0x38-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x7f</string>
-				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;2A</string>
+					<string>[A</string>
 				</dict>
 				<key>0xf700-0x240000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;5A</string>
+					<string>[A</string>
 				</dict>
 				<key>0xf700-0x260000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;6A</string>
+					<string>[A</string>
 				</dict>
 				<key>0xf700-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x41</string>
+					<string>[A</string>
 				</dict>
 				<key>0xf701-0x220000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;2B</string>
+					<string>[B</string>
 				</dict>
 				<key>0xf701-0x240000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;5B</string>
+					<string>[B</string>
 				</dict>
 				<key>0xf701-0x260000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;6B</string>
+					<string>[B</string>
 				</dict>
 				<key>0xf701-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x42</string>
+					<string>[B</string>
 				</dict>
 				<key>0xf702-0x220000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;2D</string>
+					<string>[D</string>
 				</dict>
 				<key>0xf702-0x240000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;5D</string>
+					<string>[5D</string>
 				</dict>
 				<key>0xf702-0x260000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;6D</string>
-				</dict>
-				<key>0xf702-0x280000</key>
 				<dict>
 					<key>Action</key>
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x1b 0x1b 0x5b 0x44</string>
 				</dict>
+				<key>0xf702-0x280000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>b</string>
+				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;2C</string>
+					<string>[C</string>
 				</dict>
 				<key>0xf703-0x240000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;5C</string>
+					<string>[5C</string>
 				</dict>
 				<key>0xf703-0x260000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;6C</string>
+					<string>[C</string>
 				</dict>
 				<key>0xf703-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x43</string>
-				</dict>
-				<key>0xf704-0x20000</key>
-				<dict>
-					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;2P</string>
-				</dict>
-				<key>0xf705-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2Q</string>
-				</dict>
-				<key>0xf706-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2R</string>
-				</dict>
-				<key>0xf707-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2S</string>
+					<string>f</string>
 				</dict>
 				<key>0xf708-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[15;2~</string>
+					<string>[25~</string>
 				</dict>
 				<key>0xf709-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[17;2~</string>
+					<string>[26~</string>
 				</dict>
 				<key>0xf70a-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[18;2~</string>
+					<string>[28~</string>
 				</dict>
 				<key>0xf70b-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[19;2~</string>
-				</dict>
-				<key>0xf70c-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[20;2~</string>
-				</dict>
-				<key>0xf70d-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[21;2~</string>
-				</dict>
-				<key>0xf70e-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[23;2~</string>
-				</dict>
-				<key>0xf70f-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[24;2~</string>
+					<string>[29~</string>
 				</dict>
 				<key>0xf729-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;2H</string>
+					<string>[H</string>
 				</dict>
 				<key>0xf729-0x40000</key>
 				<dict>
 					<key>Action</key>
-					<integer>10</integer>
+					<integer>5</integer>
 					<key>Text</key>
-					<string>[1;5H</string>
+					<string></string>
 				</dict>
 				<key>0xf72b-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;2F</string>
+					<string>[F</string>
 				</dict>
 				<key>0xf72b-0x40000</key>
 				<dict>
 					<key>Action</key>
-					<integer>10</integer>
+					<integer>4</integer>
 					<key>Text</key>
-					<string>[1;5F</string>
+					<string></string>
 				</dict>
 			</dict>
 			<key>Link Color</key>
@@ -1862,7 +1792,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>Working Directory</key>
 			<string>/Users/rybickic</string>
 		</dict>
@@ -1876,21 +1806,30 @@
 		<string>SFMono Nerd Font</string>
 		<string>Monaco</string>
 	</array>
+	<key>NoSyncFrame_SessionsPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {3840, 2160}}</string>
+		<key>topLeft</key>
+		<string>{1617, 1756}</string>
+	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1440, 900}}</string>
+		<string>{{0, 0}, {3008, 1692}}</string>
 		<key>topLeft</key>
-		<string>{271, 759}</string>
+		<string>{447, 855}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>FF90EF90-99B9-4C8D-A09D-CC8313C4219F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>5</integer>
+	<integer>13</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>611543036.47102106</real>
+	<real>612399914.28917301</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -2643,7 +2582,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-18T02:04:30Z</date>
+	<date>2020-05-29T23:33:27Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
