@@ -4,6 +4,11 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# Use bat for colored less output
+# This could cause issues since "bat" relies on "less" as a pager,
+# but let's just try this for now.
+alias less="bat"
+
 # Shortcuts
 alias d="cd ~/Developer"
 
