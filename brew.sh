@@ -53,6 +53,7 @@ brew install nano
 brew install vim
 
 # Install several other useful tools.
+brew install git-delta
 brew install bat
 brew install git
 brew install gzip

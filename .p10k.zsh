@@ -22,7 +22,7 @@ typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_BACKGROUND=
 
 typeset -g POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon user anaconda virtualenv dir_writable dir vcs)
-typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs battery time)
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs time)
 typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "
 typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 typeset -g POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S}"
