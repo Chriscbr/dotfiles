@@ -1,4 +1,3 @@
-zmodload zsh/zprof
 alias ls="${aliases[ls]:-ls} -G"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -53,4 +52,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-zprof
+
