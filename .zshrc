@@ -1,4 +1,7 @@
+zmodload zsh/zprof
 alias ls="${aliases[ls]:-ls} -G"
+
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Define colors for BSD ls if they're not already defined
 if [[ -z "$LSCOLORS" ]]; then
@@ -50,3 +53,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+zprof

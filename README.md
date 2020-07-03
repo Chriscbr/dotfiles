@@ -2,40 +2,31 @@
 
 Personally customized settings for how I use my command line, based on <https://github.com/mathiasbynens/dotfiles>.
 
-- [TODO] Consider adjusting my setup and see if I can safely keep my dotfiles managed using `git bare` as described [here](https://www.atlassian.com/git/tutorials/dotfiles) instead of manually syncing with `bootstrap.sh`.
+Designed to be imported as a git bare repository, as described [here](https://www.atlassian.com/git/tutorials/dotfiles).
 
-## Zsh setup
-My current setup is based on [prezto](https://github.com/sorin-ionescu/prezto).
+## setup
+
 To set it up, do the following:
-1. Clone this repo (I usually put my repos in `~/Developer` on macOS):
-```sh
-git clone --recursive https://github.com/Chriscbr/dotfiles.git
-```
-If you forget to add --recursive when you clone this repo, then run the following in the root directory:
-```sh
-git submodule update --init --recursive
-```
-2. Make sure there isn't any important information in `~/.zshrc`, `~/.zprofile`, or `~/.zshenv` (if there is, consider moving it to corresponding files in this repo since those files will get overwritten).
-3. Run this script to sync all of your important files from the repository to your home directory:
-```sh
-./bootstrap.sh
-```
-4. Finally, restart your shell by opening a new one, or by running:
-```sh
-exec zsh -l
+
+```shell
+$ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+$ git clone --separate-git-dir=$HOME/.cfg https://github.com/Chriscbr/dotfiles.git $HOME/myconf-tmp
+$ cp ~/myconf-tmp/.gitmodules ~
+$ rm -r ~/myconf-tmp/
+$ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 ```
 
-There might be some visual bugs if you haven't installed a necessary Nerd Font like the one below, or aren't currently using `zsh` as your shell.
-But I've tried this once when setting up a new Mac and it worked fairly okay.
-
-## Manual installations
+After this the bare repository should be in your home directory, and any files you are missing you should be able to just `git restore`.
+You can run `exec zsh -l` at any point to reload the current dotfiles, for if you make changes to things like `.zshrc`.
 
 Install the iTerm2 theme located at `material-design-colors.itermcolors` through the iTerm2 preferences > Profiles > Colors.
+
+There might be some visual quirks with the shell prompt if you haven't installed a Nerd Font like the one included, or aren't currently using `zsh` as your shell.
 
 ## Fonts
 
 Currently using [Nerd Font patched version of SF Mono](https://github.com/Twixes/SF-Mono-Powerline).
-Previously have used SF Mono patched with Powerline, and Fira Code patched with Nerd Fonts.
+I've previously used SF Mono patched with Powerline, and Fira Code patched with Nerd Fonts.
 
 ## iTerm profile
 
@@ -64,15 +55,18 @@ May require logging out and back in for changes to take effect.
 A lot of these are bound to become out of date stop working just based on macOS updates, but I doubt any of them would accidentally change in behavior for backwards compatability reasons.
 
 ## Install Homebrew formulae
+
 ```
 ./brew.sh
 ```
 
 ## Python installation
+
 Right now I'm using anaconda for managing Python environments and versions - seems to make the most sense that homebrew has issues with staying updated with the latest Python versions, as of writing.
 
 I also use `jupyter notebook` and `jupyter lab` occasionally for more interactive Python development.
 
 ## Scripts
+
 Extra scripts that I wanted on my path (e.g. `wabt` WebAssembly tools that had to be manually compiled) are placed in the .scripts folder.
 
