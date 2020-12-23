@@ -27,14 +27,10 @@ alias lu='lt -u'         # Lists sorted by date, most recent last, shows access 
 alias g="git"
 alias gd="git diff"
 alias gs="git status -sb"
+
+# Count the total number of lines of code in the repository
 # adding -z and -0 arguments will escape file names so we can count filenames with spaces
 alias gloc="git ls-files -z | xargs -0 wc -l"
-
-# Open current repo on GitHub. Courtesy of:
-# https://gist.github.com/igrigorik/6666860
-gh() {
-    open https://github.$(git config remote.origin.url | cut -f2 -d.)
-}
 
 # Update things
 alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g;"
@@ -43,3 +39,15 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
+
+# Inspect processes
+alias psmem="ps -e -orss,args | sort -b -k1,1nr"
+alias psmem10="ps -e -orss,args | sort -b -k1,1nr | head -10"
+alias pscpu="ps -e -o pcpu,cpu,cputime,args | sort -k1 -nr"
+alias pscpu10="ps -e -o pcpu,cpu,cputime,args | sort -k1 -nr | head -10"
+
+# List brew packages that are leaf nodes (i.e. have no dependencies), and their corresponding dependencies
+alias brewdeps="brew leaves | xargs brew deps --installed --for-each | sed \"s/^.*:/$(tput setaf 4)&$(tput sgr0)/\""
+
+# Dev tools
+alias pj="npx projen"
