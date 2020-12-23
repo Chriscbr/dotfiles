@@ -7,6 +7,12 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Set a really fast key repeat.
 defaults write -g KeyRepeat -int 1
 
+# Remove the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 0
+
+# Remove the animation when hiding/showing the dock
+defaults write com.apple.dock autohide-time-modifier -float 0
+
 # fix rendering issue with vscode
 # see: https://github.com/Microsoft/vscode/issues/51132
 # defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled -bool NO
