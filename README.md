@@ -8,13 +8,13 @@ Designed to be imported/used as a git bare repository, as described [here](https
 
 To set it up, follow the instructions from [here](https://www.atlassian.com/git/tutorials/dotfiles).
 
-As an additional note, since I am using a git submodule, you will also need to run `config submodule update` to separately clone the contents of the submodules, such as powerlevel10k.
+`setup.sh` also sets up and updates several dotfiles and installations and things of that nature.
 
 You can run `exec zsh -l` at any point to reload the current dotfiles, for if you make changes to things like `.zshrc`.
 
 Install the iTerm2 theme located at `material-design-colors.itermcolors` through the iTerm2 preferences > Profiles > Colors.
 
-There might be some visual quirks with the shell prompt if you haven't installed a Nerd Font like the one included, or aren't currently using `zsh` as your shell.
+There might be some visual quirks with the shell prompt if you haven't installed a Nerd Font like the one included, or aren't using `zsh` as your shell.
 
 ## fonts
 
