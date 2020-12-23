@@ -33,18 +33,22 @@ BREW_PREFIX=$(brew --prefix)
 # brew install curl
 # brew install make
 
-# Install node
+# Install development tools
+brew install awscli
+brew install gh
 brew install node
+brew install nvm
+brew install yarn
 
 # Install zsh
 brew install zsh
 brew install zsh-autosuggestions
 
 # Switch to using zsh as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/zsh";
-fi;
+# if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
+#   echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
+#   chsh -s "${BREW_PREFIX}/bin/zsh";
+# fi;
 
 # Install more recent versions of several utilities.
 brew install bash
@@ -53,16 +57,17 @@ brew install nano
 brew install vim
 
 # Install several other useful tools.
-brew install git-delta
 brew install bat
 brew install git
+brew install git-delta
 brew install gzip
-brew install tree
+brew install jq
 brew install pstree
 brew install python
 brew install rsync
+brew install tree
+brew install youtube-dl
 brew install wget
-brew install jq
 
 # Install fzf, a search utility.
 # brew install fzf
@@ -70,7 +75,7 @@ brew install jq
 # (Note: this script will try to modify my zshrc in the root directory,
 # although the actual file changes would need to be actually made within
 # this repo for them to be kept.)
-$(brew --prefix)/opt/fzf/install
+# $(brew --prefix)/opt/fzf/install
 
 # Install some silly programs.
 brew install cowsay
