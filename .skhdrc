@@ -91,20 +91,18 @@
 ctrl - right : yabai -m query --displays --display \
     | jq -re ".index" \
     | xargs -I{} yabai -m query --spaces --display {} \
-    | jq -sre "add | sort_by(.id) | reverse | nth(index(map(select(.focused == 1))) - 1).index" \
+    | jq -sre "add | sort_by(.index) | reverse | nth(index(map(select(.focused == 1))) - 1).index" \
     | xargs -I{} yabai -m space --focus {}
 
 ctrl - left : yabai -m query --displays --display \
     | jq -re ".index" \
     | xargs -I{} yabai -m query --spaces --display {} \
-    | jq -sre "add | sort_by(.id) | nth(index(map(select(.focused == 1))) - 1).index" \
+    | jq -sre "add | sort_by(.index) | nth(index(map(select(.focused == 1))) - 1).index" \
     | xargs -I{} yabai -m space --focus {}
 
 # Window navigation
-ctrl + alt + cmd - left : yabai -m window --focus west
-ctrl + alt + cmd - right : yabai -m window --focus east
-ctrl + alt + cmd - up : yabai -m window --focus north
-ctrl + alt + cmd - down : yabai -m window --focus south
+ctrl + alt + cmd - left : yabai -m display --focus next
+ctrl + alt + cmd - right : yabai -m display --focus prev
 
 # Move spaces
 
