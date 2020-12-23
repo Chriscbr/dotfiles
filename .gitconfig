@@ -1,31 +1,35 @@
 [user]
 	name = Chriscbr
 	email = crybicki98@gmail.com
+	signingkey = 56DA4EFDCF940F87
+
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = code --wait
-  pager = delta
+	pager = delta
+
+[credential]
+	helper = osxkeychain
 
 [delta]
-    plus-color = "#012800"
-    minus-color = "#340001"
-    theme = 'Monokai Extended'
-    features = unobtrusive-line-numbers decorations
-    whitespace-error-style = 22 reverse
+	plus-color = "#012800"
+	minus-color = "#340001"
+	theme = 'Monokai Extended'
+	features = unobtrusive-line-numbers decorations
+	whitespace-error-style = 22 reverse
 
 [delta "unobtrusive-line-numbers"]
-    line-numbers = true
-    line-numbers-minus-style = "#444444"
-    line-numbers-zero-style = "#444444"
-    line-numbers-plus-style = "#444444"
-    line-numbers-left-format = "{nm:>4}"
-    line-numbers-right-format = "{np:>4} "
+	line-numbers = true
+	line-numbers-minus-style = "#444444"
+	line-numbers-zero-style = "#444444"
+	line-numbers-plus-style = "#444444"
+	line-numbers-left-format = "{nm:>4}"
+	line-numbers-right-format = "{np:>4} "
 
 [delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
-    hunk-header-decoration-style = yellow ul 
+	commit-decoration-style = bold yellow box
+	file-style = bold yellow ul
+	file-decoration-style = none
+	hunk-header-decoration-style = yellow ul ol
 
 [diff]
 	tool = vscode
@@ -34,15 +38,22 @@
 
 [alias]
 	lg = log --graph --abbrev-commit --decorate --date=local --format=format:'%C(yellow)%h%C(reset) - %C(blue)%an <%ae>%C(reset) %C(magenta)%ad (%ar)%C(reset)%C(green)%d%C(reset)%n %C(white)%s%C(reset)' --all
+	unstage = reset HEAD --
+	uncommit = reset --soft HEAD~1
+	recommit = commit --amend --no-edit
 
 [merge]
 	tool = vscode
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
 
-[pull]
-	# git pull should do a rebase after fetch instead of merge
-	rebase = true
-
 [rebase]
 	autoStash = true
+[commit]
+	gpgsign = true
+
+[pull]
+	rebase = true
+
+[push]
+	default = nothing
