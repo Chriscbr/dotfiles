@@ -22,6 +22,12 @@ set scrolloff=5
 set number relativenumber
 set nu rnu
 
+" Fix mouse settings
+set mouse=a
+
+" Use system clipboard when yanking
+set clipboard=unnamed
+
 " Keybinds to move text up and down
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
@@ -30,6 +36,14 @@ inoremap ˚ <Esc>:m .-2<CR>==gi
 vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
 
+nnoremap <leader>n :NERDTreeToggleVCS<CR>
+
+" Do not automatically delete buffers when switching between files
+set hidden
+
 filetype plugin indent on
 
 syntax on
+
+" ensure vim-gitgutter appears immediately, instead of after 4 seconds
+set updatetime=100
