@@ -45,22 +45,15 @@ I'm also hesitant to fully commit to using Yabai since it requires disabling SIP
 ./.macos
 ```
 
-May require logging out and back in for changes to take effect.
-A lot of these are bound to become out of date stop working just based on macOS updates, but I doubt any of them would accidentally change in behavior for backwards compatability reasons.
+Some changes may require logging out and back in for changes to take effect.
+A lot of these are bound to become out of date or stop working because of macOS updates, but what can you do.
 
 ## homebrew
 
-```
-./brew.sh
-```
+Simply run `brew bundle` and it should install everything in `Brewfile` automatically.
 
 ## python
 
 Right now I'm using anaconda for managing Python environments and versions - seems to make the most sense that homebrew has issues with staying updated with the latest Python versions, as of writing.
 
 I also use `jupyter notebook` and `jupyter lab` occasionally for more interactive Python development.
-
-## scripts
-
-Extra scripts that I wanted on my path (e.g. `wabt` WebAssembly tools that had to be manually compiled) are placed in the .scripts folder.
-
