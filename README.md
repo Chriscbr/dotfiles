@@ -19,7 +19,7 @@ There might be some visual quirks with the shell prompt if you haven't installed
 ## fonts
 
 Currently using [Nerd Font patched version of SF Mono](https://github.com/Twixes/SF-Mono-Powerline).
-I've previously used SF Mono patched with Powerline, and Fira Code patched with Nerd Fonts.
+In the past I've used SF Mono patched with Powerline and Fira Code patched with Nerd Fonts.
 
 ## iTerm profile
 

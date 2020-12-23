@@ -14,4 +14,7 @@ else
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 fi
 
+# try changing the shell to zsh
+chsh -s $(which zsh)
+
 echo "Setup complete!"
