@@ -49,5 +49,8 @@ alias pscpu10="ps -e -o pcpu,cpu,cputime,args | sort -k1 -nr | head -10"
 # List brew packages that are leaf nodes (i.e. have no dependencies), and their corresponding dependencies
 alias brewdeps="brew leaves | xargs brew deps --installed --for-each | sed \"s/^.*:/$(tput setaf 4)&$(tput sgr0)/\""
 
+# Pretty-print JSON
+alias jsontidy="pbpaste | jq '.' | pbcopy"
+
 # Dev tools
 alias pj="npx projen"

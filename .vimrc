@@ -47,3 +47,16 @@ syntax on
 
 " ensure vim-gitgutter appears immediately, instead of after 4 seconds
 set updatetime=100
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" VSCode-like text completion
+" Temporarily disabling for now
+" Try ":CocList extensions" to see all extensions currently installed
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Initialize plugin system
+call plug#end()

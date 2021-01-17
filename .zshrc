@@ -10,6 +10,9 @@
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 export LSCOLORS='exfxcxdxbxGxDxabagacad'
+export CLICOLOR=1
+
+alias ls="ls -F"
 
 # Define colors for the completion system if they're not already defined
 if [[ -z "$LS_COLORS" ]]; then
@@ -77,3 +80,6 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
+
+# python poetry
+export PATH="$HOME/.poetry/bin:$PATH"
