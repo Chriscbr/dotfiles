@@ -40,4 +40,7 @@ else
     git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_SYNTAX_HIGHLIGHTING_PATH
 fi
 
+# try changing the shell to zsh
+chsh -s $(which zsh)
+
 echo "Setup complete!"
