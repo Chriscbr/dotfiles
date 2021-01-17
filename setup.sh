@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-if [ "$OSTYPE" = darwin* ]; then
+if [ ${OSTYPE:-unknown} = darwin* ]; then
     # install macOS XCode command-line utilities
     xcode-select --install
 
