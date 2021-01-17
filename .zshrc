@@ -7,6 +7,32 @@
 # 4. zlogin (unused)
 # 5. zlogout (unused)
 
+# Path to your oh-my-zsh installation.	
+export ZSH="$HOME/.oh-my-zsh"	
+
+# A function called handle_completion_insecurities, seems to take up a lot of
+# time between commands, and this disables it.
+export ZSH_DISABLE_COMPFIX=true
+
+plugins=(
+    colored-man-pages
+    fancy-ctrl-z
+    osx
+    safe-paste
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# Fix slowdown caused by compinit	
+autoload -Uz compinit	
+for dump in $HOME/.zcompdump(N.mh+24); do	
+  compinit	
+done	
+compinit -C
+# end fix
+
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 export LSCOLORS='exfxcxdxbxGxDxabagacad'
@@ -20,12 +46,12 @@ if [[ -z "$LS_COLORS" ]]; then
 fi
 
 # Load powerlevel10k theme preferences
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/powerlevel10k/powerlevel10k.zsh-theme
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
+[[ -f $HOME/.p10k.zsh ]] && source $HOME/powerlevel10k/powerlevel10k.zsh-theme
+[[ -f $HOME/.p10k.zsh ]] && source $HOME/.p10k.zsh
 
 # Load the shell dotfiles, and then some:
-for file in ~/.{aliases,extra}; do
+for file in $HOME/.{aliases,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
@@ -49,27 +75,18 @@ nvm() {
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/rybickic/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$($HOME/anaconda3/bin/conda shell.zsh hook 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/rybickic/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/rybickic/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/rybickic/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# # Better zsh history searching
-# # https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
-# autoload -U up-line-or-beginning-search
-# autoload -U down-line-or-beginning-search
-# zle -N up-line-or-beginning-search
-# zle -N down-line-or-beginning-search
-# bindkey "^[[A" up-line-or-beginning-search # Up
-# bindkey "^[[B" down-line-or-beginning-search # Down
 
 # Enables reverse-i-search with ctrl + r (press ctrl + r multiple times to see more matches)
 bindkey '^r' history-incremental-search-backward
@@ -80,6 +97,3 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
-
-# python poetry
-export PATH="$HOME/.poetry/bin:$PATH"

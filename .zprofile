@@ -12,8 +12,9 @@ fi
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  ~/.cargo/bin
-  ~/.scripts
+  $HOME/.cargo/bin
+  $HOME/.poetry/bin
+  $HOME/.scripts
   /Library/TeX/texbin
   $path
 )
