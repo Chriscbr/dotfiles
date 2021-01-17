@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 set -eu
-if [ -n "$BASH" ]; then
-    set -o pipefail
-fi
 
 # if [[ "$OSTYPE" == darwin* ]]; then
 #     # install macOS XCode command-line utilities
